@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GPIO Box</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="chota.min.css" />
+        <style>
+            body {
+                background-color: #303030;
+                color: #ededed;
+            }
+            .card {
+                margin-top: "1em";
+                --bg-color: #424242;
+            }
+            .nav {
+                background-color: #b53f41;
+                margin-bottom: 0.5em;
+            }
+            .nav a {
+                color: #ededed;
+            }
+            .nav .brand {
+                color: #ededed;
+                width: 7em;
+                font-size: 1.3em;
+                white-space: nowrap;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav class="nav">
+            <div class="nav-left">
+                <a class="brand"><img src="logo.svg" alt="" /> GPIO Box </a>
+            </div>
+            <div class="nav-right">
+                <a href="/">Home</a>
+                <a href="/update">Update</a>
+                <a href="/webserial">Console</a>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="col-0 col-3 col-4"></div>
+
+            <div class="col">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <header>
+                                <h4>Inputs</h4>
+                            </header>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="card">
+                            <header>
+                                <h4>Ouputs</h4>
+                            </header>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="card">
+                            <header>
+                                <h4>Settings</h4>
+                            </header>
+
+                            <p>Status: <strong> %STATE%</strong></p>
+
+                            <p>
+                                <input
+                                    type="text"
+                                    minlength="7"
+                                    maxlength="15"
+                                    size="15"
+                                    pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$"
+                                />
+                            </p>
+
+                            <footer class="is-right">
+                                <a class="button primary">Save</a>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-0 col-3 col-4"></div>
+        </div>
+    </body>
+</html>
